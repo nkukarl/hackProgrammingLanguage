@@ -44,8 +44,8 @@ list($my_dict_evens, $my_dict_odds) = Dict\partition($my_dict, $val ==> $val % 2
 $my_dict = dict['one' => 1, 'two' => 2, 'three' => 3, 'four' => 4];
 list($my_dict_starts_with_t, $my_dict_not_starts_with_t) = Dict\partition_with_key($my_dict, $val ==> Str\starts_with($val, 't'));
 
-// $my_dict_evens = dict['two' => 2, 'three' => 3];
-// $my_dict_odds = dict['one' => 1, 'four' => 4];
+// $my_dict_starts_with_t = dict['two' => 2, 'three' => 3];
+// $my_dict_not_starts_with_t = dict['one' => 1, 'four' => 4];
 ```
 
 ### Dict\equal
