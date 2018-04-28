@@ -212,3 +212,34 @@ $my_vec_doubled = Vec\map($my_vec, $val ==> $val * 2);
 // $my_vec_doubled = vec[2, 4, 6];
 ```
 
+### Vec\intersect
+
+```php
+$allowed_vec = vec[1, 2, 3];
+$val1 = 0;
+$val2 = 4;
+
+$provided_vec = vec[$val1, $val2];
+
+$flag1 = !C\contains($allowed_vec, $val1) && !C\contains($allowed_vec, $val2);
+$flag2 = C\is_empty(Vec\intersect($allowed_vec, $provided_vec));
+
+$allowed_vec = vec[1, 2, 3];
+$val1 = 1;
+$val2 = 4;
+
+$provided_vec = vec[$val1, $val2];
+
+$flag1 = !C\contains($allowed_vec, $val1) && !C\contains($allowed_vec, $val2);
+$flag2 = C\is_empty(Vec\intersect($allowed_vec, $provided_vec));
+
+$allowed_vec = vec[1, 2, 3];
+$val1 = 1;
+$val2 = 2;
+
+$provided_vec = vec[$val1, $val2];
+
+$flag1 = !C\contains($allowed_vec, $val1) && !C\contains($allowed_vec, $val2);
+$flag2 = C\is_empty(Vec\intersect($allowed_vec, $provided_vec));
+```
+
